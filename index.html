@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JaggerCSS Test</title>
+    <link rel="stylesheet" href="/static/JagCSS-dev.css">
+    <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+
+<body>
+
+    <main>
+        <div class="navtool bg-grey-shadow">
+            <a href="javascript:history.back()" class="nt-sq no-hyperlink no-decor">↩</a>
+            <a href="javascript:location.reload()" class="nt-sq no-hyperlink no-decor">⟳</a>
+            <a href="javascript:history.forward()" class="nt-sq no-hyperlink no-decor">↪</a>
+            <div class="spacer"></div>
+
+            <p id="JCSS-NAVTOOL-LABEL" class="no-margin align-vertical auto-left-margin p1e"></p>
+
+            <script>document.getElementById("JCSS-NAVTOOL-LABEL").textContent = document.title;</script>
+        </div>
+
+        <h1 class="regular italic underline blue large no-margin no-pad">Hello, World.</h1>
+        <p>Does the mind rule the body or does the body rule the mind? <a
+                class="underline blue thinner no-hyperlink text-halo-less text-halo-hover"
+                href="https://www.youtube.com/watch?v=b_3oFRcTNHo">I dunno.</a>
+
+        <div class="light-shadow m2t m2b p1 p2s border-gray round1 no-pad">
+            <h3 class="italic m2t"> “Hey, Buddy! I'm speaking in <a class="underline blue no-hyperlink halo-weak blue" target="_blank"
+                    href="https://youtu.be/7ixQr7-3hyI?t=7">an accent beyond</a> her range of hearing!„</h3>
+            <p class="italic m2b serif">-Stephen Merchant as Wheatley, Portal 2</p>
+        </div>
+
+        <img src="static/img/sillissey.png" class="round1 light-shadow">
+        <figcaption>Steven Patrick Morrissey with Fanny The Cat on his head.</figcaption>
+
+
+        <div class="track m3t bg-gray p3 round1 border-gray light-shadow bg-gray-gradient">
+            <img class="album" src="static/img/tqid.png" alt="The Queen Is Dead">
+
+            <div class="right">
+                <figcaption class="text">
+                    Listen to <a class="halo green">The Queen Is Dead</a> by The Smiths' instrumental
+                </figcaption>
+
+                <audio class="halo green" controls src="static/The Queen Is Dead (Instrumental).mp3"></audio>
+            </div>
+        </div>
+
+        <p class="serif m3t">This is Button Patrick Buttonnissey. Press him to view an example of this css library's
+            usecase. </p>
+        <a class="button bg-gray-gradient" href="documentation-and-such.html">Click me oh oh oh click me</a>
+        <p class="m4t"></p>
+
+
+        <footer class="bg-gray-alt w100 p1 flex light-shadow border-gray round2">
+            <p>&copy; Joe Jagger 2026+</p>
+            <div class="spacer"></div>
+            <p class="m2e ">View on GitHub <a href="https://github.com/j-jagger/JaggerCSS"
+                    class="underline no-hyperlink blue text-halo-less text-halo-hover" target="_blank">here</a></p>
+        </footer>
+    </main>
+
+</body>
+
+</html>

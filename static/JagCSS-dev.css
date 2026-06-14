@@ -1,4 +1,5 @@
 /* DO NOT SERVE ME! Use the compressed version. */
+/* JaggerCSS v1 @ https://github.com/j-jagger/JaggerCSS */
 
 /* Globals */
 
@@ -19,7 +20,6 @@ html {
     background-color: var(--JCSS-Main-Background);
     font-family: var(--JCSS-PrimaryFont), Verdana, Geneva, Tahomami;
     color: var(--JCSS-White);
-    max-width: 1024px;
     overflow-wrap: break-word;
     word-break: break-word;
     color-scheme: dark;
@@ -31,13 +31,101 @@ image {
     margin-right: 1rem;
 }
 
-figcaption{
-    font-family: var(--JCSS-SerifFont),serif;
+figcaption {
+    font-family: var(--JCSS-SerifFont), serif;
     font-style: italic;
     margin-top: 5px;
     font-size: 80%;
 }
 
+main,
+.jcss-main {
+    max-width: 1024px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+audio {
+    padding: 1rem;
+    border-radius: 10px;
+    background: #171717;
+}
+
+/* Misc */
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.album {
+    width: 200px;
+    transform: skew(13deg, -2deg);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+
+/* Effects */
+
+.skew {
+    transform: skew(4deg, -2deg);
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+.skew img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.border-gray {
+    border: 1px solid #444444;
+}
+
+.halo {
+    text-shadow:
+        0 0 8px  color-mix(in srgb, var(--c) 80%, transparent),
+        0 0 16px color-mix(in srgb, var(--c) 60%, transparent),
+        0 0 24px color-mix(in srgb, var(--c) 40%, transparent);
+}
+.halo-weak {
+    text-shadow:
+        0 0 4px  color-mix(in srgb, var(--c) 60%, transparent),
+        0 0 10px color-mix(in srgb, var(--c) 40%, transparent),
+        0 0 16px color-mix(in srgb, var(--c) 25%, transparent);
+}
+
+.blue  { --c: rgb(102, 204, 255); }
+.red   { --c: rgb(255, 80, 80); }
+.green { --c: rgb(80, 255, 160); }
+
+
+.text-halo-hover {
+    transition: text-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.text-halo-hover:hover {
+    text-shadow:
+        0 0 8px  color-mix(in srgb, var(--c) 95%, transparent),
+        0 0 16px color-mix(in srgb, var(--c) 75%, transparent),
+        0 0 28px color-mix(in srgb, var(--c) 55%, transparent);
+}
 /* NavTool */
 
 .navtool {
@@ -50,8 +138,11 @@ figcaption{
     align-items: center;
 }
 
-.navtool .spacer {
-    flex: 1;
+@media (max-width: 320px) {
+    .navtool {
+        margin: 0 !important;
+        visibility: hidden;
+    }
 }
 
 .navtool .nt-sq {
@@ -67,6 +158,19 @@ figcaption{
 }
 
 
+/* Flex and such */
+.flex {
+    display: flex;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
 /* Alignment */
 
 .align-vertical {
@@ -81,6 +185,7 @@ figcaption{
 
 .bg-gray {
     background-color: rgb(31, 31, 31);
+
 }
 
 .bg-gray-gradient {
@@ -331,7 +436,11 @@ figcaption{
 }
 
 /* Roundness */
-.round {
+.round1 {
+    border-radius: 1rem;
+}
+
+.round2 {
     border-radius: 1rem;
 }
 
